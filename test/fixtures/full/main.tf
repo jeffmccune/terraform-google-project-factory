@@ -32,7 +32,7 @@ provider "gsuite" {
 }
 
 module "project-factory" {
-  source              = "../../../"
+  source              = "../../../modules/gsuite_enabled"
   name                = "${var.name}"
   random_project_id   = true
   org_id              = "${var.org_id}"
