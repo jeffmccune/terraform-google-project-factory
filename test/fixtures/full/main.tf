@@ -16,7 +16,7 @@
 
 provider "google" {
   credentials = "${file(var.credentials_path)}"
-  version = "~> 1.19"
+  version     = "~> 1.19"
 }
 
 provider "gsuite" {
@@ -32,7 +32,9 @@ provider "gsuite" {
 }
 
 module "project-factory" {
-  source              = "../../../modules/gsuite_enabled"
+  source = "../../../modules/gsuite_enabled"
+
+  domain              = "${var.domain}"
   name                = "${var.name}"
   random_project_id   = true
   org_id              = "${var.org_id}"
