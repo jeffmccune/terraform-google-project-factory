@@ -28,7 +28,10 @@ credentials_path = "credentials.json"
 # The G Suite admin account to impersonate when managing G Suite groups and group membership
 gsuite_admin_account = "admin@example.com"
 
-# The Shared VPC host project.
+# The Shared VPC host project.  This project must exist prior to test execution,
+# however, the VPC network will be created by the test suite and need not exist.
+# See /examples/test-fixtures/ for an example using Project Factory to create
+# the VPC host project.
 #
 # Example:
 #
@@ -38,7 +41,10 @@ gsuite_admin_account = "admin@example.com"
 # ```
 shared_vpc = "host-vpc-project-id"
 
-# The folder ID where the project will be created.
+# The folder ID where the project will be created.  See /examples/test-fixtures/
+# for an example using Project Factory to create a folder using the Seed Service
+# account.  The output folder_id may be used as the input value.
+#
 # Example source: `gcloud alpha resource-manager folders list --organization $(gcloud organizations list --format='get(name)')`
 # folder_id = "000000000000"
 
