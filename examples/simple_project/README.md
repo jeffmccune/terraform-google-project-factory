@@ -17,8 +17,8 @@ Expected variables:
 |------|-------------|:----:|:-----:|:-----:|
 | admin_email | Admin user email on Gsuite | string | - | yes |
 | billing_account |  | string | - | yes |
+| credentials_path | Path to a Service Account credentials file with permissions documented in the readme | string | - | yes |
 | organization_id |  | string | - | yes |
-| credentials_path |  | string | - | yes |
 
 ## Outputs
 
